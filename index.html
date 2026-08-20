@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Ani's Arcade</title>
+  <link rel="icon" href="assets/fox-head.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="glow"></div>
+
+  <section id="title-screen" class="screen">
+    <img class="logo-fox" src="assets/fox-head.png" alt="Ani">
+    <h1 class="marquee">ANI'S ARCADE</h1>
+    <p class="tagline">three pixel games · one fox</p>
+    <button id="startBtn" class="start-btn">PRESS START</button>
+    <p class="hint">tap · click · enter</p>
+  </section>
+
+  <section id="select-screen" class="screen hidden">
+    <header class="select-header">
+      <img src="assets/fox-head.png" alt="">
+      <div>
+        <h2>PICK A CABINET</h2>
+        <p>Choose a game to play</p>
+      </div>
+    </header>
+
+    <div class="cabinets">
+      <a class="cabinet" href="games/runner/index.html" data-game="runner">
+        <div class="cabinet-top">PIXEL FOX<br>RUNNER</div>
+        <div class="cabinet-screen runner">
+          <div class="pixel-scene"></div>
+        </div>
+        <div class="cabinet-body">
+          <span class="genre">Platformer</span>
+          <p>Run, jump, grab coins. Survive the night forest.</p>
+          <span class="play">PLAY ▶</span>
+        </div>
+      </a>
+
+      <a class="cabinet" href="games/snake/index.html" data-game="snake">
+        <div class="cabinet-top">FOX<br>SNAKE</div>
+        <div class="cabinet-screen snake">
+          <img src="assets/fox-head.png" alt="">
+        </div>
+        <div class="cabinet-body">
+          <span class="genre">Arcade</span>
+          <p>Eat, grow, don't bite. Golden apples every 5.</p>
+          <span class="play">PLAY ▶</span>
+        </div>
+      </a>
+
+      <a class="cabinet" href="games/tower/index.html" data-game="tower">
+        <div class="cabinet-top">TOWER<br>DEFENDER</div>
+        <div class="cabinet-screen tower">
+          <img src="assets/fox-head.png" alt="">
+          <img src="assets/fox-head.png" alt="">
+        </div>
+        <div class="cabinet-body">
+          <span class="genre">Strategy</span>
+          <p>Place fox towers. Buy extras. Hold the path.</p>
+          <span class="play">PLAY ▶</span>
+        </div>
+      </a>
+    </div>
+
+    <button id="backTitle" class="ghost-btn">◀ Title</button>
+  </section>
+
+  <script src="arcade.js"></script>
+</body>
+</html>
