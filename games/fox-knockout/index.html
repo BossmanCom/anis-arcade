@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>FOX KNOCKOUT — Ani's Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="arcade-back" href="../../index.html">◀ Arcade</a>
+  <div id="wrap">
+    <canvas id="game" width="320" height="420" aria-label="FOX KNOCKOUT"></canvas>
+    <div id="pads">
+      <button type="button" data-act="dodgeL" aria-label="Dodge left">◀<small>A</small></button>
+      <button type="button" data-act="punchL" aria-label="Left punch">Z<small>PUNCH</small></button>
+      <button type="button" id="starBtn" data-act="star" aria-label="Star punch">★<small>STAR</small></button>
+      <button type="button" data-act="punchR" aria-label="Right punch">X<small>PUNCH</small></button>
+      <button type="button" data-act="dodgeR" aria-label="Dodge right">▶<small>D</small></button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
