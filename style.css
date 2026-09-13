@@ -45,6 +45,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+#select-screen {
+  justify-content: flex-start;
+  overflow-y: auto;
+}
 .hidden { display: none; }
 
 .logo-fox {
@@ -125,9 +129,9 @@ body {
 
 .cabinets {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  width: min(720px, 100%);
+  width: min(980px, 100%);
 }
 .cabinet {
   text-decoration: none;
@@ -180,6 +184,41 @@ body {
 .cabinet-screen.chrono {
   background: linear-gradient(#0b0014, #1a1a2e 55%, #0a1f0a);
 }
+.cabinet-screen.tailship {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(240, 211, 107, 0.38), transparent 52%),
+    linear-gradient(#2a1428, #120c18 68%, #3a1e18);
+}
+
+.cabinet-screen.knockout {
+  background:
+    radial-gradient(ellipse at 50% 28%, rgba(255, 80, 40, 0.28), transparent 52%),
+    linear-gradient(#1a1030 0%, #0c0818 48%, #2a1810 48%, #1a100c);
+  gap: 18px;
+}
+.cabinet-screen .glove {
+  width: 28px;
+  height: 22px;
+  background: #d03040;
+  border-radius: 10px 10px 8px 8px;
+  box-shadow: 0 0 8px #ff406088, inset 0 -3px 0 #8a1020;
+  position: relative;
+}
+.cabinet-screen .glove::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: -5px;
+  height: 6px;
+  background: #f0d8c0;
+  border-radius: 2px;
+}
+.cabinet-screen .tail-mark {
+  font-size: 42px;
+  color: #f0d36b;
+  text-shadow: 0 0 16px #f0d36b99, 0 0 28px #ff4fa355;
+}
 .pixel-scene {
   width: 28px;
   height: 36px;
@@ -229,6 +268,12 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 980px) {
+  .cabinets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(720px, 100%);
+  }
+}
 @media (max-width: 780px) {
   body { overflow: auto; }
   .screen { justify-content: flex-start; padding-top: 36px; }
