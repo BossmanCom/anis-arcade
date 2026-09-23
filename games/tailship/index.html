@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="/games/tailship/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tailship</title>
@@ -20,7 +21,7 @@
         <div class="panel menu-panel">
           <p class="kicker">LANTERN-LIT SOCIAL DEDUCTION</p>
           <h2>Tailship</h2>
-          <p class="lede">A kitsune and neko crew on a twilight ship. Find the Shade among your own house.</p>
+          <p class="lede">A kitsune and neko crew on a twilight ship. Find the Shade among your own house. Own-house LAN only. Not affiliated with anyone else&rsquo;s crew game.</p>
           <label>Callsign<br><input id="nameIn" maxlength="16" value="Pilot" autocomplete="off" /></label>
           <div class="skins" id="skins"></div>
           <p class="solo-label">Single player (vs bots)</p>
@@ -33,13 +34,13 @@
             <input id="codeIn" maxlength="4" placeholder="CODE" style="width:5em;text-transform:uppercase" />
             <button id="btnJoin" class="secondary">Join</button>
           </div>
-          <p class="help">WASD move · E use / bell / report / task · Q kill · V vent.</p>
+          <p class="help">WASD move &middot; E use / bell / report / task &middot; Q kill &middot; V vent. Two tabs on this PC work. Solo plays in the browser. Couch LAN: run <code>python3 server.py</code> from the Tailship zip.</p>
         </div>
       </div>
       <div id="lobby" class="overlay hidden">
         <div class="panel">
           <h2>Lobby</h2>
-          <p id="lobbyMsg">Waiting for crew.</p><p>Room code: <strong id="roomCode">----</strong></p>
+          <p id="lobbyMsg">Waiting for crew. Host starts when you have at least two.</p><p>Room code: <strong id="roomCode">----</strong></p>
           <button id="claimHostLobby" class="secondary hidden">Claim host</button>
           <button id="btnStart" class="gold">Start voyage</button>
         </div>
@@ -56,7 +57,7 @@
           <div id="chatlog"></div>
         </div>
         <h2 id="meetWhy">Meeting</h2>
-        <p>Pick someone, then hit Submit.</p>
+        <p>Pick someone, then hit Submit. Votes are open — everyone can see them.</p>
         <div id="votes"></div>
         <div class="row" id="voteActions">
           <button id="btnSubmitVote" class="gold" type="button" disabled>Submit vote</button>
@@ -83,12 +84,12 @@
         <div class="splash-inner">
           <div class="splash-mark">狐</div>
           <h1>TAILSHIP</h1>
-          <p class="splash-tag">kitsune &amp; neko · find the Shade</p>
+          <p class="splash-tag">kitsune &amp; neko &middot; find the Shade</p>
           <p class="splash-hint">click or any key</p>
         </div>
       </div>
     </div>
-    <footer class="note">Authorized use: your Wi-Fi or people at your desk. MIT.</footer>
+    <footer class="note">Authorized use: your Wi-Fi or people at your desk. No WAN host. Names and chat are sanitized. MIT.</footer>
   </div>
   <script src="js/protocol.js?v=finish1"></script>
   <script src="js/map.js?v=finish1"></script>

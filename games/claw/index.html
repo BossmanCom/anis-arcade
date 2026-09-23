@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="/games/claw/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <title>ANI CLAW — Ani's Arcade</title>
@@ -12,6 +13,7 @@
 <body>
   <a class="arcade-back" href="../../index.html">◀ Arcade</a>
   <div id="fps" aria-live="off">FPS --</div>
+
   <div id="hud">
     <div class="hud-row">
       <span id="credits">CREDITS <b>5</b></span>
@@ -19,13 +21,16 @@
     </div>
     <div id="status">MOVE CLAW · SPACE TO DROP</div>
   </div>
+
   <div id="canvas-wrap">
     <canvas id="game"></canvas>
     <div id="fx-flash" aria-hidden="true"></div>
     <div id="fx-chroma" aria-hidden="true"></div>
     <div id="confetti" aria-hidden="true"></div>
   </div>
+
   <div id="banner" class="hidden" aria-live="polite"></div>
+
   <div id="pads">
     <div class="dpad">
       <button type="button" data-dir="up" aria-label="Forward">▲</button>
@@ -37,12 +42,14 @@
     </div>
     <button type="button" id="dropBtn" aria-label="Drop claw">DROP<br><small>SPACE</small></button>
   </div>
+
   <div class="la-mark">L&amp;A</div>
+
   <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      "three": "/vendor/three/build/three.module.js",
+      "three/addons/": "/vendor/three/examples/jsm/"
     }
   }
   </script>

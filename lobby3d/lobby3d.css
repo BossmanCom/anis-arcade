@@ -9,6 +9,7 @@ html, body {
   user-select: none;
   -webkit-user-select: none;
 }
+
 #c {
   display: block;
   width: 100%;
@@ -17,6 +18,7 @@ html, body {
   inset: 0;
   z-index: 0;
 }
+
 .arcade-back {
   position: fixed;
   top: 12px;
@@ -32,6 +34,7 @@ html, body {
   text-shadow: 0 0 8px rgba(255, 122, 26, 0.5);
 }
 .arcade-back:hover { background: rgba(40, 16, 20, 0.9); color: #ffe08a; }
+
 #fps {
   position: fixed;
   top: 12px;
@@ -44,6 +47,7 @@ html, body {
   padding: 6px 8px;
   border: 1px solid #2a3a30;
 }
+
 #hud {
   position: fixed;
   left: 50%;
@@ -94,6 +98,7 @@ html, body {
   color: #6a5040;
   letter-spacing: 0.04em;
 }
+
 #pads {
   display: none;
   position: fixed;
@@ -107,7 +112,10 @@ html, body {
   gap: 4px;
   justify-items: center;
 }
-#pads .mid { display: flex; gap: 4px; }
+#pads .mid {
+  display: flex;
+  gap: 4px;
+}
 #pads button {
   width: 52px;
   height: 52px;
@@ -119,6 +127,7 @@ html, body {
   touch-action: none;
 }
 #pads button:active { background: rgba(255, 122, 26, 0.35); }
+
 @media (max-width: 820px), (pointer: coarse) {
   #pads { display: block; }
   #hint { font-size: 15px; }

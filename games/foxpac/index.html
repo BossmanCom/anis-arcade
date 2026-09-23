@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="/games/foxpac/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <title>FOXPAC — Ani's Arcade</title>
@@ -11,6 +12,7 @@
 </head>
 <body>
   <a class="arcade-back" href="../../index.html">◀ Arcade</a>
+
   <div id="wrap">
     <header id="hud">
       <div class="hud-row">
@@ -24,6 +26,7 @@
         <span>HI <b id="hiscore">0</b></span>
       </div>
     </header>
+
     <div id="canvas-wrap">
       <canvas id="game" width="304" height="336" aria-label="FOXPAC"></canvas>
       <div id="overlay" class="hidden">
@@ -31,6 +34,7 @@
         <p id="overlay-msg">PRESS ENTER / TAP TO START</p>
       </div>
     </div>
+
     <div id="pads">
       <div class="dpad">
         <button type="button" data-dir="up" aria-label="Up">▲</button>
@@ -43,6 +47,7 @@
       <button type="button" id="startBtn" aria-label="Start or restart">START<br><small>ENTER</small></button>
     </div>
   </div>
+
   <script src="game.js?v=respawn2"></script>
 </body>
 </html>
