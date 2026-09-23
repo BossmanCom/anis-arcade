@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tailship</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <header class="bar">
+      <h1>TAILSHIP</h1>
+      <span class="tag">kitsune / neko deck &mdash; local social deduction</span>
+      <span id="roleTag" style="margin-left:auto"></span>
+    </header>
+    <div id="stage">
+      <canvas id="game" width="1280" height="720"></canvas>
+      <canvas id="minimap" width="180" height="116"></canvas>
+      <div id="menu" class="overlay">
+        <div class="panel menu-panel">
+          <p class="kicker">LANTERN-LIT SOCIAL DEDUCTION</p>
+          <h2>Tailship</h2>
+          <p class="lede">A kitsune and neko crew on a twilight ship. Find the Shade among your own house.</p>
+          <label>Callsign<br><input id="nameIn" maxlength="16" value="Pilot" autocomplete="off" /></label>
+          <div class="skins" id="skins"></div>
+          <p class="solo-label">Single player (vs bots)</p>
+          <div class="row">
+            <button id="btnPracticeShade">Solo as Shade</button>
+            <button id="btnPracticeDeck" class="secondary">Solo as Deckhand</button>
+          </div>
+          <div class="row">
+            <button id="btnHost" class="gold">Host local</button>
+            <input id="codeIn" maxlength="4" placeholder="CODE" style="width:5em;text-transform:uppercase" />
+            <button id="btnJoin" class="secondary">Join</button>
+          </div>
+          <p class="help">WASD move · E use / bell / report / task · Q kill · V vent.</p>
+        </div>
+      </div>
+      <div id="lobby" class="overlay hidden">
+        <div class="panel">
+          <h2>Lobby</h2>
+          <p id="lobbyMsg">Waiting for crew.</p><p>Room code: <strong id="roomCode">----</strong></p>
+          <button id="claimHostLobby" class="secondary hidden">Claim host</button>
+          <button id="btnStart" class="gold">Start voyage</button>
+        </div>
+      </div>
+      <div id="taskOverlay" class="overlay hidden"></div>
+      <div id="banner" class="overlay hidden"><div class="panel win-panel"><h2 id="bannerText"></h2><p>Refresh to play again.</p></div></div>
+      <div id="rolePop" class="role-pop"></div>
+      <div id="meet">
+        <div id="chatbox">
+          <div id="chatrow">
+            <input id="chatIn" maxlength="80" autocomplete="off" placeholder="plain text only" />
+            <button id="chatSend" type="button">Send</button>
+          </div>
+          <div id="chatlog"></div>
+        </div>
+        <h2 id="meetWhy">Meeting</h2>
+        <p>Pick someone, then hit Submit.</p>
+        <div id="votes"></div>
+        <div class="row" id="voteActions">
+          <button id="btnSubmitVote" class="gold" type="button" disabled>Submit vote</button>
+        </div>
+        <div id="voteBoard" class="vote-board"></div>
+      </div>
+      <div id="hud" style="display:none">
+        <div class="hudcard" id="taskList"></div>
+        <div class="hudcard morale" id="moraleCard">
+          <div class="morale-label">SHIP MORALE</div>
+          <div id="moraleVal" class="morale-num">40</div>
+          <div id="streakVal" class="streak"></div>
+        </div>
+        <div class="actions">
+          <button id="useBtn">USE</button>
+          <button id="claimHostHud" class="claimhost hidden">Claim host</button>
+          <button id="killBtn">KILL</button>
+          <button id="ventBtn">VENT</button>
+        </div>
+      </div>
+      <div id="fxFlash" class="fx-flash"></div>
+      <div id="fxLayer"></div>
+      <div id="splash">
+        <div class="splash-inner">
+          <div class="splash-mark">狐</div>
+          <h1>TAILSHIP</h1>
+          <p class="splash-tag">kitsune &amp; neko · find the Shade</p>
+          <p class="splash-hint">click or any key</p>
+        </div>
+      </div>
+    </div>
+    <footer class="note">Authorized use: your Wi-Fi or people at your desk. MIT.</footer>
+  </div>
+  <script src="js/protocol.js?v=finish1"></script>
+  <script src="js/map.js?v=finish1"></script>
+  <script src="js/characters.js?v=finish1"></script>
+  <script src="js/render.js?v=finish1"></script>
+  <script src="js/tasks.js?v=finish1"></script>
+  <script src="js/fx.js?v=finish1"></script>
+  <script src="js/ui.js?v=finish1"></script>
+  <script src="js/practice.js?v=finish1"></script>
+  <script src="js/net.js?v=finish1"></script>
+  <script src="js/main.js?v=finish1"></script>
+</body>
+</html>
