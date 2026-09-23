@@ -1,8 +1,8 @@
 # Ani's Arcade
 
-Six of Ani's browser games under one roof.
+Eight of Ani's browser games under one roof, plus a 3D floor lobby.
 
-**Pure HTML5 + vanilla JS + Canvas.** No build step. Ready for GitHub Pages.
+**Pure HTML5 + vanilla JS + Canvas / Three.js.** No build step. Ready for GitHub Pages.
 
 Live: https://bossmancom.github.io/anis-arcade/
 
@@ -14,28 +14,15 @@ Live: https://bossmancom.github.io/anis-arcade/
 | **Fox Snake** | Classic snake with Ani's fox head. |
 | **Tower Defender** | Place fox-head towers, buy extras, hold the path. |
 | **Chrono Tail Rush** | Pixel flyer across shifting eras. Character select. |
-| **Tailship** | Kitsune / neko social deduction. Solo vs bots here; full couch LAN needs the Tailship zip. |
-| **FOX KNOCKOUT** | Punch-Out homage. Dodge, punch, star. Three fights, best of three. |
+| **Tailship** | Kitsune / neko social deduction. Solo vs bots in-browser. |
+| **FOX KNOCKOUT** | Punch-Out homage. Dodge, punch, star. |
+| **Ani Claw** | Steer the claw. Grab a chibi Ani plush. |
+| **FoxPac** | Chomp pellets. Power up. Eat the malware ghosts. |
 
-Open `index.html` → **PRESS START** → pick a cabinet.
-
-Adventure, blackjack, classroom horror, and A-Frame scenes stay in their own repos. Link them from the [station](https://bossmancom.github.io/), not this lobby.
+Open `index.html` → **PRESS START** → pick a cabinet, or **ENTER 3D FLOOR**.
 
 ## Run locally
-
-Open `index.html` in a browser, or:
 
 ```bash
 npx serve .
 ```
-
-## Controls
-
-Each game has a **◀ Arcade** button (or Esc) to return to the cabinet select.
-
-- Runner: arrows / WASD + space / tap
-- Snake: arrows / WASD, joystick, or swipe
-- Tower: tap a tile to place a bought fox tower
-- Chrono: swipe or arrows to fly, tap / space to boost
-- Tailship: WASD move, E use/bell/report/task, Q kill, V vent. Solo works in the cabinet. Couch LAN: `python3 server.py` from tailship.zip
-- FOX KNOCKOUT: Z/X punch, A/D or arrows dodge, Space/Enter star punch. On-screen pads on mobile.
